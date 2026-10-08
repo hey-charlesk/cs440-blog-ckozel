@@ -16,15 +16,22 @@ This is a problem for when you want precise control over the flow of traffic; su
 before the network does and rerouting traffic through known working links. Major networks can use proprietary routers
 to achieve such precise traffic flow, but this ability is generally unavailable in older/consumer hardware. 
 
-The team here figured out how to utilize the 'ECMP-groups' feature, which is generally unused in most networks,
-to implement such level of programmatic traffic engineering. Encoding the ability for a packet to specify what 
-ECMP-group to use via 'IPv4-header DSCP field'. This allowed the traffic to set their own DSCP header for the 
+Calling their new method P-ECMP, the team here figured out how to utilize the 'ECMP-groups' feature to specify what
+route to take on each packet. ECMP-group is generally unused in most datacenter networks, however most hardware supports
+it, making the idea compatible with Tencent's existing hardware. 
+To implement such level of programmatic traffic engineering, the desired path for a packet to take is encoded in the
+via 'IPv4-header DSCP field'. This allowed the application traffic to set their own DSCP header for the 
 routing behavior desired. This requires reprogramming the switches in the network to utilize ECMP-group which 
 a configuration that encodes this programming, but it allow it to be backward compatible on legacy hardware 
 and with IPv4. This also does not affect unaware traffic or handing the packets off to an unaware router. 
 
 ## Critique
-
+How does this compare to proprietary hardware, or alternative solutions. 
+Their deployment and testing was mostly done in simulator. While DSCP was not used by Tencent who was developing
+P-ECMP, it might be used by others. One potentially major issue is the limited programability with 6 bits of DSCP
+header to use, only a offset can be specified not a full network path which would take 24 bits. The current solution 
+just specifies a way to ask for a different ECMP route (offset from route index 0), which works well for recovering 
+from discovered bad routes. 
 
 ## Connections
 
