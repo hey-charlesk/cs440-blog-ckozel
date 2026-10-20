@@ -33,10 +33,10 @@ simple with just 2 senders.
 ## Connections
 
 This is the second paper here that lives in the [ns-3](https://www.nsnam.org/) simulator. 
-[P-ECMP](/2026/10/08/ecmp-traffic-engineering/) ran most of its evaluation in ns-3
+[P-ECMP](/cs440-blog-ckozel/2026/10/08/ecmp-traffic-engineering/) ran most of its evaluation in ns-3
 before Tencent deployed one failover use case to production. Here ns-3 is the everything. R+ generates
 candidate CCAs, then each is tested on 200 network configurations in ns-3 and the best wins. 
 
-[Raha](/2026/10/06/Raha-Fault-Tolerance/) is also tagged simulation but is not ns-3. It models the network 
+[Raha](/cs440-blog-ckozel/2026/10/06/Raha-Fault-Tolerance/) is also tagged simulation but is not ns-3. It models the network 
 through MetaOpt's convex optimization rather than pushing packets through a simulated topology.
 

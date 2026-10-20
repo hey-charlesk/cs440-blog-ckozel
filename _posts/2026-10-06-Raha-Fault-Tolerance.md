@@ -29,5 +29,5 @@ paper hinges on but I did not follow that math.
 ## Connections
 
 This is the fault-tolerance detection / solving which can prevent 
-[partial reachability from islands and peninsulas](/2026/10/01/Partial-Reachability/). Baltra et al. measure
+[partial reachability from islands and peninsulas](/cs440-blog-ckozel/2026/10/01/Partial-Reachability/). Baltra et al. measure
 the Internet once its broken into fragmented paths. Raha tries to find the fragmentation before it happens.
