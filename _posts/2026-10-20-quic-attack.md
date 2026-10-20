@@ -47,5 +47,5 @@ data available, even from passive measurements.
 [Lessons learned from operating a large network telescope, SIGCOMM 2025](https://dl.acm.org/doi/10.1145/3718958.3754347)
 Covers fundamentals of Internet Telescopes.
 
-[P-ECMP](/2026/10/08/ecmp-traffic-engineering/) notes the same ECMP 5-tuple hashing got-cha making specific downstream
+[P-ECMP](/cs440-blog-ckozel/2026/10/08/ecmp-traffic-engineering/) notes the same ECMP 5-tuple hashing got-cha making specific downstream
 destinations difficult to specify.
