@@ -18,6 +18,7 @@ title: Home
 
 ### Week {{ current_week }}
 {% endif %}
-- **[{{ post.title }}]({{ post.url | relative_url }})** — {{ post.paper_venue }} · {{ post.date | date: "%B %d" }}
-  {% if post.connections %}_Connects to: {% for c in post.connections %}[{{ c.title }}]({{ c.url | relative_url }}){% unless forloop.last %}, {% endunless %}{% endfor %}_{% endif %}
+- **[{{ post.title }}]({{ post.url | relative_url }})**<br>
+  {{ post.paper_title }} — {{ post.paper_venue }} · {{ post.date | date: "%B %d" }}
+  {% if post.connections %}<br>_Connects to: {% for c in post.connections %}[{{ c.title }}]({{ c.url | relative_url }}){% unless forloop.last %}, {% endunless %}{% endfor %}_{% endif %}
 {% endfor %}
