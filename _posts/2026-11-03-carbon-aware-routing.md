@@ -18,8 +18,8 @@ their load vs idle power consumption. In what seems like an impossible task to m
 note the possibility of using smart power supplies already on the network to measure consumption. A database matching 
 profiled components could compensate for others. 
 
-They propose CATE, Carbon Aware Traffic Engineering, which operates on the intra-AS level, where Link-State algorithm
-typically determines how packets are routed. Its reasonably feasible that a AS network manager could profile their
+They propose CATE, Carbon Aware Traffic Engineering, which operates on the intra-AS level, where Link-State algorithms
+(OSPF, IS-IS) typically determines how packets are routed. Its reasonably feasible that a AS network manager could profile their
 network and deploy such an algorithm to route optimizing carbon emissions. 
 
 Note Carbon vs. Energy aware, since carbon emissions are ultimately the real negative to avoid, components are also
