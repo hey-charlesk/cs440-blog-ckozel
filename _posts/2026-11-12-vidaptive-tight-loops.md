@@ -1,4 +1,4 @@
-`---
+---
 layout: post
 title: "Send Garbage, Improve Performance"
 date: 2026-11-12
