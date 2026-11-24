@@ -16,3 +16,13 @@ layout: default
 <hr>
 
 {{ content }}
+
+{% if page.slides %}
+<h2 id="slides">Slides</h2>
+
+<p><a href="{{ page.slides | relative_url }}">Open the slides in a new tab (PDF)</a></p>
+
+<object data="{{ page.slides | relative_url }}" type="application/pdf" style="width: 100%; aspect-ratio: 16 / 10; border: 1px solid #ddd;">
+  <p>Your browser can't show PDFs inline, use the link above.</p>
+</object>
+{% endif %}
